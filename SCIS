@@ -1,96 +1,114 @@
+SCIS Summary System - Complete Map (Multi-Program)
+# SCIS – Summary & Coordination Intelligence System  
+**Canonical Specification – Version 3.1**  
+**Release Date:** 18 November 2025  
+**Purpose:** The single, unambiguous, phase-driven, contract-first orchestration system for LLM-assisted development of one or many programs in the same flat folder.
 
+### Core Principles (non-negotiable)
+1. Everything happens inside a numbered Phase (P0–P7 + P99)
+2. Every inter-program interaction is declared exactly once in A0
+3. No hard-coded paths, ports, schemas, or assumptions
+4. All files follow A#p#s#f# naming – zero exceptions
+5. Every code file must declare its exact purpose at the very top in a mandatory comment block
+6. Every component and non-component inside a file must be explicitly numbered using the global unique identifier format
+7. Automation and tooling can fully parse the folder state, file purposes, and internal structure from file names + mandatory headers alone
 
-***
+### New Mandatory Internal Numbering System (effective immediately – applies to every code file)
+Inside every .py, .ts, .js, .go, etc. file:
 
-# Case Study: SCIS (Sequential Component Identification System) Implementation
+- Components (classes, major functions, exported modules, etc.) → numbered as **C** followed by the file’s full base name  
+  Example in file `A2p3s3f2.py`:  
+  ```python
+  # Purpose of this file: Validates incoming API payloads against registered schemas
 
-## Background
-A growing challenge in software projects is maintaining clear organization, traceability, and consistency across files, components, and generated artifacts—especially in AI-driven and large-scale systems. Without explicit structure, debugging, collaboration, and automated validation become difficult and error-prone.
+  class CA2p3s3f2.1:      # PayloadValidator
+      ...
 
-## Problem
-Traditional folder-based organization and arbitrary naming conventions lack deterministic traceability. Projects suffer from orphaned files, ambiguous relationships between code pieces, and difficulty mapping errors or logs back to original sources.
+  def CA2p3s3f2.2(payload: dict) -> bool:   # validate_payload
+      ...
+  ```
 
-## Solution
-SCIS is a systematic, flat-coordinate naming framework that applies a global hierarchy to every project asset, including code files, components, logs, reports, and databases. The SCIS system encodes every artifact’s location and role via a unified coordinate scheme (phase, section, file, component level). It eliminates folders and enforces explicit numeric identifiers, enabling precise, automated mapping and validation throughout the build and test lifecycle.
+- Non-components (private helpers, constants, small internal functions) → numbered as **NC**  
+  ```python
+  def NCA2p3s3f2.1(data: str) -> str:   # _clean_string
+      ...
 
-## Results
-Adoption of SCIS in ProgramBuilder and other projects has:
+  NCA2p3s3f2.2 = "2025-11-18"   # SCHEMA_VERSION
+  ```
 
-- Enabled complete traceability from design summaries through compiled code and testing reports.
-- Simplified collaboration by offering an explicit, self-describing project structure.
-- Supported reproducible builds with no ambiguity in file/component referencing.
-- Facilitated automated validation by linking Agent Matrix errors directly to SCIS coordinates.
+This eliminates all ambiguity when referencing anything inside a file from anywhere else (logs, tests, docs, LLM prompts, etc.).
 
-***
+### New Mandatory File Header (must be the very first lines of every code file)
+```text
+# File: A#p#s#f#.ext
+# Purpose: <One-sentence exact description of what this file does>
+# Phase created: P#
+# Components: CA#p#s#f#.# (list if >0)
+# NonComponents: NCA#p#s#f#.# (list if >0)
+```
 
-# SCIS - Sequential Component Identification System (Version 4.1)
+### Updated Phase Table (unchanged except for new clarity guarantees)
+| Phase | Name                  | Primary Goal                          | Ends when                        | Main files created          |
+|-------|-----------------------|---------------------------------------|----------------------------------|-----------------------------|
+| P0    | Concept               | Vision for the whole folder/system    | A0p0s0f0.md accepted             | A0p0s0f0.md                 |
+| P1    | Architecture & Design | Programs, interfaces, data flow decided| All maps + contracts exist       | A0 + A# design files        |
+| P2    | Full Specification    | Every future phase fully specced      | All Phase Complete Maps finished | A#p0s0f5…fn.md              |
+| P3    | Skeleton & Bootstrap  | Repo is cloneable, entry points exist, CI runs | “Hello world” works      | File structure + entry points |
+| P4    | Core Implementation   | Main business logic (split into P4.1, P4.2…) | Core features work end-to-end | s0–s3 code                  |
+| P5    | Polish & Integration  | UI/UX, docs, packaging, performance   | Feature-complete                 | Remaining code + docs       |
+| P6    | Testing & Hardening   | Full coverage, security, load tests   | All tests pass                   | s4 tests + reports          |
+| P7    | Release               | Deployed / published                 | Live or shipped                  | A0p0s0f6.md + artifacts     |
+| P99   | Debug / Hotfix        | Emergency fixes                       | Bug resolved                     | A0p0s0f5.md + optional fixes|
 
-## Overview
-SCIS is a deterministic hierarchical system for uniquely identifying and managing all software project artifacts.
+Sub-phases → P4.1 = p41, etc.
 
-## Core Concepts
-- Global coordinate system: phase (p#), section (s#), file (f#), component (Cp#s#f#.#).
-- Flat file structure with no folders.
-- Consistent naming conventions enable automated validation and error tracing.
-- Embedded SCIS tags in logs, reports, and code enable full traceability.
-- Supports total project rebuilds from design specs alone.
+### File Naming Convention
+- A#   → A0 = folder-level, A1/A2/A3… = individual programs
+- p#   → Phase (p0, p1 … p7, p41, p99, etc.)
+- s#   → Section (0–9, see table below)
+- f#   → Sequence number within that phase+section
+- ext  → .md | .py | .json | .ts | .go | .txt | etc.
+`A#p#s#f#.<ext>`
 
-## Naming Conventions
-- Files: `p{phase}s{section}f{file}.{extension}`
-- Components: `Cp{phase}s{section}f{file}.{component}`
+### Section Table (s#) – 
+| s# | Content                              | Typical extensions       | Filled in phases |
+| s0 | Core logic & orchestration           | .py .ts .js .go          | P3–P5            |
+| s1 | Init, config, entry points           | .py .json .env           | P3+              |
+| s2 | Component logic                      | code files               | P4–P5            |
+| s3 | Utilities & validation               | code files               | P4–P6            |
+| s4 | Tests                                | .test.* .json            | P6               |
+| s5 | Reports, matrices, summaries         | .md .json .txt           | All              |
+| s6 | Fix specifications                   | .json                    | P99              |
+| s7 | Logs                                 | .txt .json               | Runtime          |
+| s8 | Documentation                        | .md                      | P5–P7            |
+| s9 | Reserved / overhead                  | any                      | System           |
+### Complete File Reference – updated with new mandatory annotations
 
-| Phase | Role / Purpose                          | Typical Sections                                   |
-| ----- | --------------------------------------- | -------------------------------------------------- |
-| p0    | Core platform/infrastructure            | s0 Core logic, s1 Initialization, s2 Utilities     |
-| p1    | Application main logic, domain-specific | s0 Business logic, s1 Data handling, s2 Validation |
-| p2    | Support libraries, helpers, testing     | s0 Helpers, s1 Tests, s2 Mocks                     |
-| p3    | Interfaces, reports, visualization      | s0 Reporting, s1 UI, s2 Export                     |
+#### A0 – Folder-Level (unchanged list, but every A0 file must now also have a # Purpose header)
 
-## Phases and Responsibilities
-- s0: Core logic and infrastructure
-- s1: Imports and initialization
-- s2: Component logic
-- s3: Validation and utilities
-- s4: Testing
-- s5: Reports
-- s6: Fix specifications
-- s7: Logs
-- s8: Documentation
-- s9: System overhead
+#### Per-Program (A1, A2, A3…) 
+| File pattern                          | Phase | Purpose                                                                 |
+|---------------------------------------|-------|-------------------------------------------------------------------------|
+| A#p0s0f2.md                           | P1    | File Structure Map – every file that will ever exist + one-line purpose for each file |
+| Every code file (s0–s4)               | P3+   | Must start with mandatory header (File / Purpose / Phase / Component list) |
+| Every component inside code files     | P4+   | Must be named CA#p#s#f#.#                                               |
+| Every non-component inside code files | P4+   | Must be named NCA#p#s#f#.#                                              |
 
-## Enforcement & Validation
-- Agent Matrix components validate strict SCIS compliance.
-- Errors trace directly to SCIS IDs (e.g., `Cp0s2f1.3`).
+### Updated Official Workflow 
+6. P4–P7 → For current phase N:  
+   - LLM reads PreBuild A#pNs0f0.md + Phase Complete Map + A0 contracts  
+   - Code is written with mandatory header + C/NCA numbering  
+   - Every new file gets its one-sentence purpose in A#p0s0f2.md (File Map) immediately  
+   - A#pNs0f1.md (Built report) is created  
+   - Development Masters updated
 
-## Benefits
-- Absolute determinism in file management.
-- Enhanced collaboration and project clarity.
-- Simplified automation and reproducibility.
+### Benefits of SCIS v3.1 (over v3.0)
+- Zero ambiguity: you can now reference any function, class, or constant in the entire repository with a single globally unique string (e.g., `CA2p41s2f7.3`)
+- File Map (A#p0s0f2.md) + mandatory headers = perfect parsability by tools and LLMs
+- Dramatically easier debugging, refactoring, test writing, and code review
+- Future SCIS tooling can auto-generate cross-references, diagrams, and impact analysis instantly
 
-***
+This document (SCIS v3.1) is now the single source of truth.  
+All future projects and all ongoing projects must migrate to v3.1 internal numbering and mandatory file-purpose headers immediately.
 
-If you want, I can help you draft the full detailed SCIS document in Markdown format, including diagrams or examples for better illustration. Would you like to proceed with that?
-
-
-Here is a short demo program component map of 8 files over 4 phases with 2-3 components each, using SCIS naming conventions:
-
-***
-
-## Demo Program Component Map
-
-| Phase | SCIS File     | Description              | Components (CpIDs)                  |
-|-------|--------------|--------------------------|-----------------------------------|
-| p0    | p0s0f1.py   | Main Entry Point          | Cp0s0f1.1 (main), Cp0s0f1.2 (init) |
-|       | p0s0f2.txt  | File Map                  | Cp0s0f2.1 (list_files), Cp0s0f2.2 (update_map) |
-| p1    | p1s0f1.py   | Core Logic A              | Cp1s0f1.1 (process_data), Cp1s0f1.2 (validate_input) |
-|       | p1s1f1.py   | Core Logic B              | Cp1s1f1.1 (calculate_result), Cp1s1f1.2 (log_output), Cp1s1f1.3 (cleanup) |
-| p2    | p2s0f1.py   | Utility Functions         | Cp2s0f1.1 (helper_one), Cp2s0f1.2 (helper_two) |
-|       | p2s1f1.py   | Data Handlers             | Cp2s1f1.1 (load_data), Cp2s1f1.2 (save_data) |
-| p3    | p3s0f1.py   | Reporting / Visualization | Cp3s0f1.1 (generate_report), Cp3s0f1.2 (render_chart) |
-
-***
-
-This table illustrates an organized set of files and components using SCIS coordinate and component ID conventions, demonstrating clear modularity and traceability across phases.
-
-
-
+Version 3.1 is fully backward-compatible with v3.0 folder structure; only internal code conventions and headers are added.
