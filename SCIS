@@ -1,114 +1,349 @@
-SCIS Summary System - Complete Map (Multi-Program)
-# SCIS – Summary & Coordination Intelligence System  
-**Canonical Specification – Version 3.1**  
-**Release Date:** 18 November 2025  
-**Purpose:** The single, unambiguous, phase-driven, contract-first orchestration system for LLM-assisted development of one or many programs in the same flat folder.
 
-### Core Principles (non-negotiable)
-1. Everything happens inside a numbered Phase (P0–P7 + P99)
-2. Every inter-program interaction is declared exactly once in A0
-3. No hard-coded paths, ports, schemas, or assumptions
-4. All files follow A#p#s#f# naming – zero exceptions
-5. Every code file must declare its exact purpose at the very top in a mandatory comment block
-6. Every component and non-component inside a file must be explicitly numbered using the global unique identifier format
-7. Automation and tooling can fully parse the folder state, file purposes, and internal structure from file names + mandatory headers alone
+## SCIS v3.4 — Summary & Coordination Intelligence System
+Canonical Multi-Program Orchestration Framework for LLM-Aligned Development
+ Version: 3.4
+ Updated: Dependency Architecture • MEM System • NCCF Schema • Filename Rules
 
-### New Mandatory Internal Numbering System (effective immediately – applies to every code file)
-Inside every .py, .ts, .js, .go, etc. file:
+## 1. Overview
+SCIS is a phase-driven, contract-first orchestration system for structuring entire software projects—across multiple programs—so that LLMs, tools, and humans interpret the repository the same way.
+Its goals are:
+Fully parseable, deterministic project structure
 
-- Components (classes, major functions, exported modules, etc.) → numbered as **C** followed by the file’s full base name  
-  Example in file `A2p3s3f2.py`:  
-  ```python
-  # Purpose of this file: Validates incoming API payloads against registered schemas
 
-  class CA2p3s3f2.1:      # PayloadValidator
-      ...
+Zero guessing and zero hallucination
 
-  def CA2p3s3f2.2(payload: dict) -> bool:   # validate_payload
-      ...
-  ```
 
-- Non-components (private helpers, constants, small internal functions) → numbered as **NC**  
-  ```python
-  def NCA2p3s3f2.1(data: str) -> str:   # _clean_string
-      ...
+Predictable program evolution through phases
 
-  NCA2p3s3f2.2 = "2025-11-18"   # SCHEMA_VERSION
-  ```
 
-This eliminates all ambiguity when referencing anything inside a file from anywhere else (logs, tests, docs, LLM prompts, etc.).
+Explicit component contracts and dependency mapping
 
-### New Mandatory File Header (must be the very first lines of every code file)
-```text
+
+Consistent reasoning for multi-agent LLM workflows
+
+
+All files follow the strict naming pattern:
+A#p#s#f#.ext
+
+Everything is stored in one flat folder.
+ LLMs must rely on SCIS maps, never inference.
+
+## 2. Universal Naming Rule (New in v3.4)
+Filenames contain no descriptive words.
+ Only the core SCIS pattern is allowed.
+Example:
+❌ A0p0s0f10.mem.json
+
+
+✔ A0p0s0f10.json
+
+
+All meaning is expressed within mandatory SCIS file headers.
+
+## 3. Phases and Subphases (Complete Table)
+SCIS uses strict development phases P0–P7 + P99, plus optional subphases such as P4.1 → written p41.
+Primary Phase Table
+Phase
+Name
+Primary Goal
+Ends When
+Main Artifacts
+P0
+Concept
+Establish vision for the system/folder
+A0p0s0f0.md accepted
+A0 system summary
+P1
+Architecture & Design
+Programs, interfaces, data flow determined
+All maps + contracts complete
+A0 + A# design files
+P2
+Full Specification
+All future work fully described
+Phase Complete Maps (PCMs) finished
+A#p0s0f5…fn.md
+P3
+Skeleton & Bootstrap
+Repo runs; entry points exist
+“Hello world” executes
+Entry points + initial skeleton
+P4
+Core Implementation
+Main logic implemented
+End-to-end core flows work
+s0–s3 code
+P5
+Polish & Integration
+Final UX/dev polish; perf tuning
+Feature-complete
+Code + docs
+P6
+Testing & Hardening
+QA, security, load testing
+All tests pass
+s4 tests, reports
+P7
+Release
+Deployment, publishing
+System shipped
+A0p0s0f6.md + artifacts
+P99
+Hotfix / Debug
+Emergency fixes
+Bug resolved
+A0p0s0f5.md + patches
+
+Used for large programs needing multiple implementation waves.
+
+## 4. Section System (s0–s9)
+Each file belongs to a section:
+s#
+Purpose
+Typical Extensions
+Phase Use
+s0
+Core logic / orchestration
+.py .ts .go
+P3–P5
+s1
+Init, config, entry points
+.py .json .env
+P3+
+s2
+Component logic
+code
+P4–P5
+s3
+Utilities & validation
+code
+P4–P6
+s4
+Tests
+.test.* .json
+P6
+s5
+Reports / summaries
+.md .json .txt
+All
+s6
+Fix specs
+.json
+P99
+s7
+Logs
+.txt .json
+Runtime
+s8
+Documentation
+.md
+P5–P7
+s9
+Reserved
+any
+System
+
+
+## 5. Minimal NCCF (Normalized Component Contract Format)
+Defined globally in:
+ A0p0s0f4.json
+To reduce token load, the SCIS v3.4 NCCF uses exactly these fields:
+component_id
+title
+phase_declared
+purpose
+inputs
+outputs
+dependencies
+constraints
+
+All components across all programs follow this schema.
+
+## 6. Dependency System (Fully Redesigned in v3.4)
+6.1 Every Program Has Its Own Dependency Map
+Example:
+A2p0s0f4.json   ← dependencies within program A2
+A3p0s0f4.json   ← dependencies within program A3
+
+Each covers only local component dependencies inside that program.
+6.2 A0 Contains the Global Dependency Map
+A0p0s0f6.json now includes:
+Cross-program dependencies
+
+
+External/API/infrastructure dependencies
+
+
+Any A0 internal dependencies
+
+
+A0 no longer stores program-level internal dependencies.
+This separation prevents conflicts and improves tool automation.
+
+## 7. MEM System (Section-Level + Global)
+7.1 Section MEM Files (Flexible Naming)
+Sections may include MEM files such as:
+A2p4s0f5.json
+A2p4s1f2.json
+A2p4s2f7.json
+
+SCIS does not assume that section MEM files must be f5.
+7.2 Global MEM (A0p0s0f10.json)
+The Global MEM now contains:
+Program list
+
+
+All section maps
+
+
+Full index of all section MEM files (no guessing)
+
+
+Reference to A0 dependency map
+
+
+References to all A# dependency maps
+
+
+Compact summaries for cross-program reasoning
+
+
+NCCF schema reference
+
+
+This is the master entry point for LLM reasoning across the entire system.
+
+## 8. A0 File Registry (Strict, No Descriptive Filenames)
+File
+Purpose
+A0p0s0f0.md
+System Summary
+A0p0s0f1.md
+Global Folder Map
+A0p0s0f2.md
+Global Architecture Overview
+A0p0s0f3.md
+Global Program & Section Index
+A0p0s0f4.json
+NCCF Schema
+A0p0s0f5.md
+Human Dependency Notes
+A0p0s0f6.json
+Global Dependency Map
+A0p0s0f7.md
+Phase Complete Map (PCM Master)
+A0p0s0f8.md
+Linter Rules (human)
+A0p0s0f9.json
+Linter Rules (machine)
+A0p0s0f10.json
+Global MEM
+A0p0s0f11.md
+Reserved
+
+All meaning is expressed in mandatory headers within each file.
+
+## 9. Per-Program Requirements (A1, A2, A3…)
+File pattern
+Phase
+Purpose
+A#p0s0f2.md
+P1
+Complete file structure map for the program
+Any code file (s0–s3)
+P3+
+Must include SCIS mandatory file header
+Components
+P4+
+Must follow CA#p#s#f#.# naming
+Non-components
+P4+
+Must follow NCA#p#s#f#.# naming
+
+
+## 10. Mandatory Code File Header
+Every code file begins with:
 # File: A#p#s#f#.ext
-# Purpose: <One-sentence exact description of what this file does>
+# Purpose: <one-sentence exact purpose>
 # Phase created: P#
-# Components: CA#p#s#f#.# (list if >0)
-# NonComponents: NCA#p#s#f#.# (list if >0)
-```
+# Components: CA#p#s#f#.# …
+# NonComponents: NCA#p#s#f#.# …
 
-### Updated Phase Table (unchanged except for new clarity guarantees)
-| Phase | Name                  | Primary Goal                          | Ends when                        | Main files created          |
-|-------|-----------------------|---------------------------------------|----------------------------------|-----------------------------|
-| P0    | Concept               | Vision for the whole folder/system    | A0p0s0f0.md accepted             | A0p0s0f0.md                 |
-| P1    | Architecture & Design | Programs, interfaces, data flow decided| All maps + contracts exist       | A0 + A# design files        |
-| P2    | Full Specification    | Every future phase fully specced      | All Phase Complete Maps finished | A#p0s0f5…fn.md              |
-| P3    | Skeleton & Bootstrap  | Repo is cloneable, entry points exist, CI runs | “Hello world” works      | File structure + entry points |
-| P4    | Core Implementation   | Main business logic (split into P4.1, P4.2…) | Core features work end-to-end | s0–s3 code                  |
-| P5    | Polish & Integration  | UI/UX, docs, packaging, performance   | Feature-complete                 | Remaining code + docs       |
-| P6    | Testing & Hardening   | Full coverage, security, load tests   | All tests pass                   | s4 tests + reports          |
-| P7    | Release               | Deployed / published                 | Live or shipped                  | A0p0s0f6.md + artifacts     |
-| P99   | Debug / Hotfix        | Emergency fixes                       | Bug resolved                     | A0p0s0f5.md + optional fixes|
+This enables full automatic parsing for LLMs and tools.
 
-Sub-phases → P4.1 = p41, etc.
+## 11. SCIS Official Workflow (v3.4)
+For phase N (P4–P7):
+LLM reads:
 
-### File Naming Convention
-- A#   → A0 = folder-level, A1/A2/A3… = individual programs
-- p#   → Phase (p0, p1 … p7, p41, p99, etc.)
-- s#   → Section (0–9, see table below)
-- f#   → Sequence number within that phase+section
-- ext  → .md | .py | .json | .ts | .go | .txt | etc.
-`A#p#s#f#.<ext>`
 
-### Section Table (s#) – 
-| s# | Content                              | Typical extensions       | Filled in phases |
-| s0 | Core logic & orchestration           | .py .ts .js .go          | P3–P5            |
-| s1 | Init, config, entry points           | .py .json .env           | P3+              |
-| s2 | Component logic                      | code files               | P4–P5            |
-| s3 | Utilities & validation               | code files               | P4–P6            |
-| s4 | Tests                                | .test.* .json            | P6               |
-| s5 | Reports, matrices, summaries         | .md .json .txt           | All              |
-| s6 | Fix specifications                   | .json                    | P99              |
-| s7 | Logs                                 | .txt .json               | Runtime          |
-| s8 | Documentation                        | .md                      | P5–P7            |
-| s9 | Reserved / overhead                  | any                      | System           |
-### Complete File Reference – updated with new mandatory annotations
+A#pNs0f0.md (PreBuild)
 
-#### A0 – Folder-Level (unchanged list, but every A0 file must now also have a # Purpose header)
 
-#### Per-Program (A1, A2, A3…) 
-| File pattern                          | Phase | Purpose                                                                 |
-|---------------------------------------|-------|-------------------------------------------------------------------------|
-| A#p0s0f2.md                           | P1    | File Structure Map – every file that will ever exist + one-line purpose for each file |
-| Every code file (s0–s4)               | P3+   | Must start with mandatory header (File / Purpose / Phase / Component list) |
-| Every component inside code files     | P4+   | Must be named CA#p#s#f#.#                                               |
-| Every non-component inside code files | P4+   | Must be named NCA#p#s#f#.#                                              |
+Phase Complete Map
 
-### Updated Official Workflow 
-6. P4–P7 → For current phase N:  
-   - LLM reads PreBuild A#pNs0f0.md + Phase Complete Map + A0 contracts  
-   - Code is written with mandatory header + C/NCA numbering  
-   - Every new file gets its one-sentence purpose in A#p0s0f2.md (File Map) immediately  
-   - A#pNs0f1.md (Built report) is created  
-   - Development Masters updated
 
-### Benefits of SCIS v3.1 (over v3.0)
-- Zero ambiguity: you can now reference any function, class, or constant in the entire repository with a single globally unique string (e.g., `CA2p41s2f7.3`)
-- File Map (A#p0s0f2.md) + mandatory headers = perfect parsability by tools and LLMs
-- Dramatically easier debugging, refactoring, test writing, and code review
-- Future SCIS tooling can auto-generate cross-references, diagrams, and impact analysis instantly
+A0 files (contracts, maps, NCCF)
 
-This document (SCIS v3.1) is now the single source of truth.  
-All future projects and all ongoing projects must migrate to v3.1 internal numbering and mandatory file-purpose headers immediately.
 
-Version 3.1 is fully backward-compatible with v3.0 folder structure; only internal code conventions and headers are added.
+Code is generated with mandatory headers + CA/NCA numbering
+
+
+New file purposes added to File Map (A#p0s0f2.md)
+
+
+Build report generated (A#pNs0f1.md)
+
+
+Development Masters updated
+
+
+
+## 12. LLM Operating Principles (Strict)
+LLMs must:
+Stay within current phase
+
+
+Never invent files or components
+
+
+Never guess filenames
+
+
+Use maps first, code second
+
+
+Reference section maps for allowed components
+
+
+Reference Global MEM when present
+
+
+Follow the NCCF schema
+
+
+Obey all numbering rules
+
+
+SCIS provides structure—LLMs must respect it.
+
+## 13. Benefits of SCIS v3.4
+Zero guessing: Perfect clarity for humans and LLMs
+
+
+Full determinism: Every file is interpretable by name alone
+
+
+Scalable: Works for single apps or large multi-program systems
+
+
+Tool-friendly: Automated analyzers and linters can parse everything
+
+
+LLM-safe: Eliminates hallucination around structure, components, and dependencies
+
+
+Backward compatible: Extends SCIS 3.x with no breaking changes
+
+
+
+
