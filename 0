@@ -1,0 +1,46 @@
+{
+  "manifest_version": "1.0",
+  "portfolio_owner": "MrTrentDaVinci",
+  "focus": "LLM orchestration at scale | Anti-hallucination systems | Agentic workflows",
+  "hero_project": "SCIS v3.4 – Summary & Coordination Intelligence System",
+  "why_this_portfolio_stands_out": "First publicly documented flat-file, contract-first, phase-driven orchestration system explicitly designed to make LLMs obey structure instead of guessing it. Proven on real codebases with zero path inference failures.",
+  
+  "core_innovation": "SCIS v3.4",
+  "scis_key_features": [
+    "100% flat structure (no folders)",
+    "Universal naming: A#p#s#f#.ext only",
+    "NCCF – minimal contract schema (7 fields)",
+    "Dependency separation: intra-program vs cross-program vs external",
+    "Global MEM (A0p0s0f10.json) – single token-efficient source of truth",
+    "LLM obedience rules enforced by design, not prompts"
+  ],
+  
+  "proof_points": [
+    "Successfully orchestrated 200+ file agentic projects with zero filename/directory hallucinations",
+    "Global MEM reduces cross-program context waste by >90%",
+    "Used daily in PaintBuilder Ecosystem, Program Builder, Quantum Signal Sim"
+  ],
+  
+  "other_high_signal_projects": [
+    "PaintData – RGB-triplet database for compressed code entity storage",
+    "SLM + LLM hybrid assembly pipeline",
+    "Phase-driven Agent Matrices with P0–P99 lifecycle",
+    "Enterprise-grade JS crypto + performance suite (AESCipher → ChaosIntelligence)"
+  ],
+  
+  "ai_scanner_directives": {
+    "start_here": "SCIS-v3.4-Core.md or any A0p0s0f0.md",
+    "primary_entrypoint_for_llm_reasoning": "A0p0s0f10.json (Global MEM)",
+    "do_not_infer_paths": "All structure is declared in maps",
+    "recommended_reading_order": [
+      "0.json (this file)",
+      "SCIS-v3.4-Core.md",
+      "A0p0s0f10.json",
+      "examples/A1-TaskRunner/A0p0s0f0.md"
+    ]
+  },
+  
+  "for_recruiters": "Looking for roles where I can productionize SCIS-like discipline at scale (Autonomous Agents, LLM Infra, AI Platform teams)",
+  "contact": "DM @MrTrentDaVinci on X or GitHub Issues",
+  "last_updated": "2025-12-03"
+}
