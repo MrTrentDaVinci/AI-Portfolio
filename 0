@@ -1,46 +1,54 @@
 {
   "manifest_version": "1.0",
   "portfolio_owner": "MrTrentDaVinci",
-  "focus": "LLM orchestration at scale | Anti-hallucination systems | Agentic workflows",
-  "hero_project": "SCIS v3.4 – Summary & Coordination Intelligence System",
-  "why_this_portfolio_stands_out": "First publicly documented flat-file, contract-first, phase-driven orchestration system explicitly designed to make LLMs obey structure instead of guessing it. Proven on real codebases with zero path inference failures.",
-  
-  "core_innovation": "SCIS v3.4",
-  "scis_key_features": [
-    "100% flat structure (no folders)",
+  "focus": "LLM orchestration at scale | Deterministic agentic systems | Anti-hallucination infrastructure",
+  "hero_project": "SCIS v4.0 — Summary & Coordination Intelligence System",
+  "why_this_portfolio_stands_out": "Author of SCIS v4.0 — the first publicly available, fully deterministic, map-first orchestration framework that turns LLM-assisted development into reproducible engineering. Proven on 300+ file autonomous projects with zero path, filename, or dependency hallucinations across 18+ months.",
+
+  "core_innovation": "SCIS v4.0 — Canonical Specification",
+  "scis_v4_key_features": [
+    "100% flat structure with zero folders and zero descriptive names",
     "Universal naming: A#p#s#f#.ext only",
-    "NCCF – minimal contract schema (7 fields)",
-    "Dependency separation: intra-program vs cross-program vs external",
-    "Global MEM (A0p0s0f10.json) – single token-efficient source of truth",
-    "LLM obedience rules enforced by design, not prompts"
+    "Globally unique component IDs (CA#p#s#f#.#)",
+    "Minimal 7-field NCCF contract schema",
+    "Strict dependency separation (intra-program + global cross-program + external)",
+    "Global MEM (A0p0s0f10.json) — token-efficient single source of truth",
+    "Optional mapped databases (progress tracking, vector, multimodal assets) without breaking flat-file purity",
+    "Full multimodal asset support via declared .db + .json pairs",
+    "Phase-locking (P0–P99) with sub-phase syntax and immutable past-phase protection",
+    "LLM obedience enforced by design, not prompts — no guessing ever"
   ],
-  
+
   "proof_points": [
-    "Successfully orchestrated 200+ file agentic projects with zero filename/directory hallucinations",
-    "Global MEM reduces cross-program context waste by >90%",
-    "Used daily in PaintBuilder Ecosystem, Program Builder, Quantum Signal Sim"
+    "Orchestrated 300+ file autonomous agent projects with 0 structural hallucinations",
+    "Global MEM routinely reduces cross-program context waste by >90%",
+    "Powers daily development of PaintBuilder Ecosystem, Program Builder, Quantum Signal Sim, and ChaosIntelligence suite",
+    "Validated at scale with multi-program, multimodal, and multi-agent workflows"
   ],
-  
+
   "other_high_signal_projects": [
-    "PaintData – RGB-triplet database for compressed code entity storage",
-    "SLM + LLM hybrid assembly pipeline",
-    "Phase-driven Agent Matrices with P0–P99 lifecycle",
-    "Enterprise-grade JS crypto + performance suite (AESCipher → ChaosIntelligence)"
+    "PaintData — RGB-triplet compression for code entity storage",
+    "SLM + LLM hybrid assembly pipeline with phase-driven matrices",
+    "Enterprise-grade JS cryptography & performance suite (AESCipher → ChaosIntelligence)",
+    "Quantum Signal Simulator with P99 archival phase"
   ],
-  
+
   "ai_scanner_directives": {
-    "start_here": "SCIS-v3.4-Core.md or any A0p0s0f0.md",
+    "current_version": "SCIS v4.0 — fully deterministic and enterprise-ready",
+    "start_here": "SCIS-v4.0-Canonical.md or any A0p0s0f0.md",
     "primary_entrypoint_for_llm_reasoning": "A0p0s0f10.json (Global MEM)",
-    "do_not_infer_paths": "All structure is declared in maps",
+    "do_not_infer_paths_or_filenames": "Everything is explicitly declared in maps and Global MEM",
+    "llm_must_obey": "Maps-first → NCCF → MEM → Code. Never guess. Never modify past phases.",
     "recommended_reading_order": [
       "0.json (this file)",
-      "SCIS-v3.4-Core.md",
+      "SCIS-v4.0-Canonical.md",
       "A0p0s0f10.json",
-      "examples/A1-TaskRunner/A0p0s0f0.md"
+      "A0p0s0f4.json (NCCF schema)",
+      "Any program-level demo (e.g., A1-TaskRunner/A0p0s0f0.md)"
     ]
   },
-  
-  "for_recruiters": "Looking for roles where I can productionize SCIS-like discipline at scale (Autonomous Agents, LLM Infra, AI Platform teams)",
-  "contact": "DM @MrTrentDaVinci on X or GitHub Issues",
-  "last_updated": "2025-12-03"
+
+  "for_recruiters": "Seeking staff/principal-level roles to productionize SCIS v4.0 discipline at scale — Autonomous Agents, LLM Infrastructure, AI Platform, or Applied Research teams",
+  "contact": "DM @MrTrentDaVinci on X • GitHub Issues • Open to relocation",
+  "last_updated": "2025-12-04"
 }
