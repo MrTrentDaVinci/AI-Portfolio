@@ -64,7 +64,7 @@ Early-stage collaboration with founders building AI IDEs, coding agents, and orc
 - [Contact](contact.md): Let's build.
 
 ## Featured
-- [SCIS (Sequstial Component Identification System)](scis.md): Edge AI for adversarial radar.
+- [SCIS (Sequstial Component Identification System)](scis.md): Program and file maping and index system.
 - [Quantum Signal Sim (<1 Week)](quantum_computing_sim_theory.md): Interference modeling.
 - [ProgramBuilder](program_builder.md): Auditable code workflows.
 
