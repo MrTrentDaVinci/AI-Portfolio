@@ -1,6 +1,6 @@
 ---
 
-# ⭐ **ProgramAnalyzer + SCIS v3.4**
+# **ProgramAnalyzer + SCIS v3.4**
 
 ### *Deterministic Multi-Agent Code Mapping System for AI-Aligned Software Engineering*
 
@@ -8,7 +8,7 @@
 
 ---
 
-## 🚀 Overview
+## Overview
 
 **ProgramAnalyzer** is a next-generation **local-only, deterministic program analysis engine** designed to power safe AI-assisted software development.
 It integrates tightly with **SCIS v3.4 (Summary & Coordination Intelligence System)** — a strict, phase-driven orchestration framework for structured, hallucination-free LLM workflows.
@@ -19,7 +19,7 @@ This project is currently **in the design stage**, with full architectural plans
 
 ---
 
-## 🧠 Core Concept
+##  Core Concept
 
 ProgramAnalyzer analyzes codebases using a network of **binary-output agents** arranged in **horizontal and vertical matrices**.
 Every agent performs one deterministic task, returning **0/1** success states, which are tracked in an internal **SQLite database**.
@@ -37,7 +37,7 @@ Together, these systems give LLMs **perfect clarity** about the structure, purpo
 
 ---
 
-## 🔩 Key Features (Designed)
+##  Key Features (Designed)
 
 ### **1. Binary Agent Matrix Architecture**
 
@@ -89,7 +89,7 @@ This ensures LLMs operate with **zero ambiguity**.
 
 ---
 
-## 🧰 Intended Use Cases
+##  Intended Use Cases
 
 * AI-guided refactoring and architecture modernization
 * Safe codebase restructuring using LLMs
@@ -100,7 +100,7 @@ This ensures LLMs operate with **zero ambiguity**.
 
 ---
 
-## 📌 Current Project Status
+##  Current Project Status
 
 * ✔ Full system architecture completed
 * ✔ SCIS compliance rules fully integrated
@@ -114,7 +114,7 @@ This project is currently in a **pre-implementation design phase**.
 
 ---
 
-## 🌟 Why This Project Matters
+##  Why This Project Matters
 
 Modern LLMs can generate code, but they fail when repository structure is unclear or ambiguous.
 ProgramAnalyzer + SCIS eliminates ambiguity entirely, enabling:
