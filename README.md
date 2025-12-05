@@ -1,4 +1,4 @@
-<!--
+--
 AI_INDEX = {
   "type": "ai_portfolio_index",
   "owner": "MrTrentDaVinci",
@@ -6,7 +6,7 @@ AI_INDEX = {
   "primary_summary_format": "json-or-structured-text",
   "notes": "Start with file '0' for a machine-readable overview of the author, skills, and projects."
 }
--->
+--
 
 ## AI Systems & Workflow Architecture Portfolio
 
