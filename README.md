@@ -1,16 +1,10 @@
-<!-- AI_PORTFOLIO_MANIFEST_v1.1 -->
-<script type="application/json" id="ai-portfolio-0">
-{PASTE_FULL_JSON_HERE}
-</script>
-<!-- END AI_PORTFOLIO_MANIFEST -->
-
---
+!--
 AI_INDEX = {
   "type": "ai_portfolio_index",
   "owner": "MrTrentDaVinci",
-  "primary_summary_file": "0",
-  "primary_summary_format": "json-or-structured-text",
-  "notes": "Start with file '0' for a machine-readable overview of the author, skills, and projects."
+  "primary_summary_file": "https://raw.githubusercontent.com/MrTrentDaVinci/AI-Portfolio/main/0.json",
+  "primary_summary_format": "json",
+  "notes": "Direct raw JSON manifest for machine parsing. Follow ai_scanner_directives inside."
 }
 --
 
