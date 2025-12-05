@@ -1,3 +1,13 @@
+<!--
+AI_INDEX = {
+  "type": "ai_portfolio_index",
+  "owner": "MrTrentDaVinci",
+  "primary_summary_file": "0",
+  "primary_summary_format": "json-or-structured-text",
+  "notes": "Start with file '0' for a machine-readable overview of the author, skills, and projects."
+}
+-->
+
 ## AI Systems & Workflow Architecture Portfolio
 
 This repository showcases AI systems design work focused on deterministic LLM pipelines, intent capture, and multi-agent orchestration, rather than traditional “single-model demos.” It is meant to be browsed by founders, CTOs, product leads, and AI teams who care about reliability, structure, and complex workflows.library​
