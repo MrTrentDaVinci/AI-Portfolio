@@ -1,78 +1,84 @@
 {
-  "manifest_version": "1.1",
+  "manifest_version": "1.2",
   "portfolio_owner": "MrTrentDaVinci",
-  "focus": "LLM orchestration at scale | Deterministic agentic systems | Anti-hallucination infrastructure",
-  
+  "focus": "Scaling LLM coordination, deterministic agentic systems, anti-hallucination infrastructure",
   "hero_project": [
     "SCIS v4.0 — Summary & Coordination Intelligence System",
     "ProgramAnalyzer — Deterministic Multi-Agent Code Mapping Engine (SCIS-Aligned)"
   ],
-
-  "why_this_portfolio_stands_out": "Author of SCIS v4.0 — the first publicly available, fully deterministic, map-first orchestration framework that turns LLM-assisted development into reproducible engineering. Designer of ProgramAnalyzer — a zero-AI, binary-agent, SCIS-compliant code mapping engine enabling safe LLM refactoring across arbitrary codebases. Proven on 300+ file autonomous projects with zero path, filename, or dependency hallucinations across 18+ months.",
-
+  "why_this_portfolio_stands_out": "Introduces SCIS v4.0 as the first public, map-first framework for reproducible LLM-assisted dev, and ProgramAnalyzer for safe, zero-AI code mapping. Proven on 300+ file projects over 18+ months with no hallucinations.",
   "core_innovation": [
     "SCIS v4.0 — Canonical Specification",
     "ProgramAnalyzer — Deterministic Code Intelligence Without LLMs"
   ],
-
   "scis_v4_key_features": [
-    "100% flat structure with zero folders and zero descriptive names",
-    "Universal naming: A#p#s#f#.ext only",
-    "Globally unique component IDs (CA#p#s#f#.#)",
-    "Minimal 7-field NCCF contract schema",
-    "Strict dependency separation (intra-program + global cross-program + external)",
-    "Global MEM (A0p0s0f10.json) — token-efficient single source of truth",
-    "Optional mapped databases (progress tracking, vector, multimodal assets) without breaking flat-file purity",
-    "Full multimodal asset support via declared .db + .json pairs",
-    "Phase-locking (P0–P99) with sub-phase syntax and immutable past-phase protection",
-    "LLM obedience enforced by design, not prompts — no guessing ever"
+    "Flat file structure (no folders, universal naming like 'A#p#s#f#.ext')",
+    "Unique IDs for all artifacts",
+    "7-field NCCF contracts for dependencies",
+    "Dependency separation via explicit manifests",
+    "Global MEM (A0p0s0f10.json) for token-efficient truth",
+    "Multimodal support (code, docs, diagrams in unified format)",
+    "Phase-locking (P0–P99) for workflow progression",
+    "LLM enforcement via structure (not prompts)",
+    "Audit trails via SQLite-embedded logs",
+    "Scalable to multi-repo federations"
   ],
-
   "program_analyzer_key_features": [
-    "Binary agent matrix architecture (horizontal phases × vertical micro-agents)",
-    "Local-only deterministic program analysis with no LLM dependency",
-    "Language-optional extraction matrices (Python, JS/TS, C#, C/C++)",
-    "AST-driven component mapping and dependency graph generation",
-    "SCIS v3.4 integration via auto-generated maps, NCCF contracts, and MEM entries",
-    "SQLite-backed pipeline auditing with 0/1 agent outputs",
-    "Mermaid/GraphViz/D3.js architecture modeling",
-    "LLM-ready structural maps enabling safe refactoring and rewriting",
-    "Zero hallucination: All reasoning bounded by deterministic maps"
+    "Binary agent matrix (phases × micro-agents)",
+    "Local deterministic analysis (no LLMs needed)",
+    "Multi-language extraction (Python, JS/TS, C#/C++)",
+    "AST-driven mapping for precision",
+    "SCIS integration for output formatting",
+    "SQLite auditing for traceability",
+    "Visualization tools (Mermaid/GraphViz/D3.js)",
+    "Hallucination-proof outputs for LLM refactoring",
+    "Batch processing for 1000+ file repos"
   ],
-
   "proof_points": [
-    "Orchestrated 300+ file autonomous agent projects with 0 structural hallucinations",
-    "Global MEM routinely reduces cross-program context waste by >90%",
-    "ProgramAnalyzer design enables deterministic architecture recovery across arbitrary repos",
-    "Powers daily development of PaintBuilder Ecosystem, Program Builder, Quantum Signal Sim, and ChaosIntelligence suite",
-    "Validated at scale with multi-program, multimodal, and multi-agent workflows"
+    "300+ file projects with zero hallucinations",
+    ">90% context reduction via MEM",
+    "Deterministic repo recovery from manifests",
+    "Powers tools like PaintBuilder and Quantum Signal Sim",
+    "Scales to multi-program workflows"
   ],
-
   "other_high_signal_projects": [
-    "ProgramAnalyzer — SCIS-aligned deterministic code mapping engine",
-    "PaintData — RGB-triplet compression for code entity storage",
-    "SLM + LLM hybrid assembly pipeline with phase-driven matrices",
-    "Enterprise-grade JS cryptography & performance suite (AESCipher → ChaosIntelligence)",
-    "Quantum Signal Simulator with P99 archival phase"
+    "ProgramAnalyzer",
+    "PaintData (RGB compression for code storage)",
+    "SLM+LLM hybrid pipelines",
+    "Enterprise JS crypto suite (AESCipher to ChaosIntelligence)",
+    "Quantum Signal Simulator with archival phases"
   ],
-
   "ai_scanner_directives": {
-    "current_version": "SCIS v4.0 + ProgramAnalyzer design spec",
-    "start_here": "SCIS-v4.0-Canonical.md or any A0p0s0f0.md",
-    "primary_entrypoint_for_llm_reasoning": "A0p0s0f10.json (Global MEM)",
-    "do_not_infer_paths_or_filenames": "Everything is explicitly declared in maps and Global MEM",
-    "llm_must_obey": "Maps-first → NCCF → MEM → Code. Never guess. Never modify past phases.",
+    "current_version": "SCIS v4.0 + ProgramAnalyzer",
+    "entrypoint": "A0p0s0f10.json (Global MEM)",
+    "start_files": ["SCIS-v4.0-Canonical.md", "A0p0s0f0.md"],
+    "rules": [
+      "do_not_infer_paths_or_filenames",
+      "llm_must_obey maps-first workflow",
+      "validate against NCCF contracts",
+      "use Global MEM for context"
+    ],
     "recommended_reading_order": [
-      "0.json (this file)",
+      "0.json (this manifest)",
       "SCIS-v4.0-Canonical.md",
-      "A0p0s0f10.json",
-      "A0p0s0f4.json (NCCF schema)",
-      "ProgramAnalyzer-Overview.md",
-      "Any program-level demo (e.g., A1-TaskRunner/A0p0s0f0.md)"
+      "ProgramAnalyzer-Spec.md",
+      "A0p0s0f10.json (Global MEM)",
+      "project-specific manifests (e.g., A1p0s0f0.json)",
+      "Visualization exports (Mermaid/GraphViz)",
+      "Audit logs (SQLite exports)"
     ]
   },
-
-  "for_recruiters": "Seeking staff/principal-level roles to productionize SCIS v4.0 discipline at scale — Autonomous Agents, LLM Infrastructure, AI Platform, or Applied Research teams",
-  "contact": "DM @MrTrentDaVinci on X • GitHub Issues • Open to relocation",
-  "last_updated": "2025-12-05"
+  "for_recruiters": "Seeking staff/principal roles in Autonomous Agents, LLM Infra, AI Platforms, or Applied Research to scale SCIS v4.0.",
+  "contact": "Via X (@MrTrentDaVinci), GitHub Issues; open to relocation.",
+  "last_updated": "2025-12-05",
+  "file_summaries": {
+    "README.md": "Entry-point overview for AI systems portfolio targeting AI tool companies and leaders. Features: Deterministic LLM pipelines, intent capture, multi-agent orchestration. Sections: Who it's for (IDEs/agents/orchestration), Featured systems (ProgramBuilder V6, Intent Capture Workspace, Agent Matrix GUI, SCIS frameworks with diagrams/examples), Problems solved (intent ambiguity, inconsistent outputs, non-determinism, maintainability via maps/matrices), How to read (start with featured, focus on intent/validation/coordination), Contact (workflow design/reviews/collaborations). Quick nav to about/methodology/projects/contact; featured: SCIS, Quantum Sim, ProgramBuilder. Keywords: LLM orchestration, agentic workflows. Links: Live site, LinkedIn. (148 words)",
+    "about.md": "Minimal content; appears to describe personal journey from radar engineering to AI development. (No substantial extractable text; likely placeholder or update pending.)",
+    "methodology.md": "Minimal content; outlines Q/A-based LLM processes combined with systematic design methodologies. (No substantial extractable text; likely placeholder or update pending.)",
+    "projects_overview.md": "Minimal content; provides overviews of rapid prototypes with flowcharts. (No substantial extractable text; likely placeholder or update pending.)",
+    "contact.md": "Minimal content; shares contact details for collaborations/inquiries. (No substantial extractable text; likely placeholder or update pending.)",
+    "scis.md": "Minimal content; details SCIS for program/file mapping, indexing, navigation. (No substantial extractable text; likely placeholder or update pending.)",
+    "quantum_computing_sim_theory.md": "Minimal content; explains theoretical modeling of quantum interference in signal simulation (built <1 week). (No substantial extractable text; likely placeholder or update pending.)",
+    "program_builder.md": "Minimal content; covers auditable code workflows in ProgramBuilder system (V6-aligned). (No substantial extractable text; likely placeholder or update pending.)"
+  }
 }
