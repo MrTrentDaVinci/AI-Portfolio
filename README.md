@@ -1,3 +1,9 @@
+<!-- AI_PORTFOLIO_MANIFEST_v1.1 -->
+<script type="application/json" id="ai-portfolio-0">
+{PASTE_FULL_JSON_HERE}
+</script>
+<!-- END AI_PORTFOLIO_MANIFEST -->
+
 --
 AI_INDEX = {
   "type": "ai_portfolio_index",
