@@ -1,38 +1,38 @@
-** SCIS — Structured, Contract-Driven, Deterministic Software Framework (v4.x)
-One-Sentence Definition (LLM-Safe)
-SCIS is a deterministic, map-authoritative software framework in which all structure, behavior, metrics, tools, and evolution are explicitly declared, ID-addressable, role-bounded, and phase-locked, enabling humans and LLMs to design, build, support, reconstruct, and evolve software without inference, scanning, or loss of intent.
+* SCIS — Structured, Contract-Driven, Deterministic Software Framework (v4.x)
+- One-Sentence Definition (LLM-Safe)
+- SCIS is a deterministic, map-authoritative software framework in which all structure, behavior, metrics, tools, and evolution are explicitly declared, ID-addressable, role-bounded, and phase-locked, enabling humans and LLMs to design, build, support, reconstruct, and evolve software without inference, scanning, or loss of intent.
 
-Absolute Non-Negotiables
-If any rule below is violated, SCIS is not being followed.
-Maps are the source of truth. Code is never authoritative.
-Nothing may be created, modified, accessed, or depended on unless it is declared in maps.
-No inference, scanning, or “reasonable assumptions.”
-Every measurable thing emits declared metrics with explicit roles.
-Metrics may only influence actions permitted by their role.
-Lifecycle stages, phases, and subphases are distinct and non-interchangeable.
-All change is append-only, traceable, and reversible.
-LLMs suggest only. Humans commit. SCIS enforces.
+** Absolute Non-Negotiables
+- If any rule below is violated, SCIS is not being followed.
+- Maps are the source of truth. Code is never authoritative.
+- Nothing may be created, modified, accessed, or depended on unless it is declared in maps.
+- No inference, scanning, or “reasonable assumptions.”
+- Every measurable thing emits declared metrics with explicit roles.
+- Metrics may only influence actions permitted by their role.
+- Lifecycle stages, phases, and subphases are distinct and non-interchangeable.
+- All change is append-only, traceable, and reversible.
+- LLMs suggest only. Humans commit. SCIS enforces.
 
-Core Mental Model
-SCIS treats software as:
-Maps (authoritative structure)
-Contracts (behavioral truth)
-Logic (deterministic intent)
-Dependencies (explicit edges)
-Metrics (role-aware signals)
-Evolution history (append-only)
-Code is an implementation artifact that must conform to all declared structure.
-If something exists but is not declared and measured, SCIS treats it as nonexistent.
+** Core Mental Model
+*** SCIS treats software as:
+- Maps (authoritative structure)
+- Contracts (behavioral truth)
+- Logic (deterministic intent)
+- Dependencies (explicit edges)
+- Metrics (role-aware signals)
+- Evolution history (append-only)
+- Code is an implementation artifact that must conform to all declared structure.
+- If something exists but is not declared and measured, SCIS treats it as nonexistent.
 
-Why SCIS Exists
-SCIS addresses systemic failures in modern and LLM-assisted software development:
-Lost intent due to context limits
-Hallucinated structure and implicit assumptions
-Unsafe file, tool, API, or database access
-Non-deterministic edits and hidden side effects
-Fragile legacy systems with unknown behavior
-Support dependent on folklore and reproduction
-SCIS forces explicit declaration and measurement before action.
+** Why SCIS Exists
+*** SCIS addresses systemic failures in modern and LLM-assisted software development:
+- Lost intent due to context limits
+- Hallucinated structure and implicit assumptions
+- Unsafe file, tool, API, or database access
+- Non-deterministic edits and hidden side effects
+- Fragile legacy systems with unknown behavior
+- Support dependent on folklore and reproduction
+- SCIS forces explicit declaration and measurement before action.
 
 Lifecycle Concepts (Non-Interchangeable)
 SCIS uses three separate lifecycle concepts.
