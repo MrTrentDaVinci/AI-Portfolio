@@ -41,6 +41,13 @@ CivilTutor began as an abandoned educational project and became an opportunity t
 
 The project demonstrates how structure and organization can transform a difficult-to-maintain codebase into a usable system.
 
+## Icon — Dynamic Icon-Based AI Workflow System (Conceptual System)
+
+Icon is a multi-phase AI interaction framework that replaces traditional text-heavy prompting with a visual, icon-driven conceptual interface. Each icon represents an action, concept, or workflow step and expands dynamically into related sub-icons, forming a structured, machine-readable conceptual map.
+
+The system combines LLM reasoning, schema generation, and persistent graph-based memory to guide users through complex tasks such as research, software design, and planning. Icons are not just UI elements—they act as composable schema fragments that define constraints, relationships, and workflow logic.
+
+At its core, Icon is designed to reduce ambiguity between human intent and AI execution by enforcing structured, progressive disclosure of complexity through visual interaction.
 ---
 
 # Improving Decision-Making Through Structure
